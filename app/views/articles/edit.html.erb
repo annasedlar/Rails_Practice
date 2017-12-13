@@ -1,5 +1,5 @@
-<h1>Create a New Post</h1></br>
-<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+<h1>Edit Post</h1></br>
+<%= form_with scope: :article, url: article_path(@article), method: :patch, local: true do |form| %>
   <% if @article.errors.any? %>
     <% @article.errors.full_messages.each do |msg| %>
       <div class="alert alert-danger"><%= msg %></div>

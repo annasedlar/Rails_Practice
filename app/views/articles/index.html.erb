@@ -1,16 +1,9 @@
-<h1>Listing All Articles</h1>
-
-<table>
- <tr>
-   <th>Title</th>
-   <th>Text</th>
- </tr>
+<h1>All Articles</h1>
 
  <% @articles.each do |article| %>
-   <tr>
-     <td><%= article.title %></td>
-     <td><%= article.text %></td>
-     <td><%= link_to 'Show', article_path(article) %></td>
-   </tr>
+   <div class="well" style="padding-top:30px">
+     <h3><%= article.title %></h3>
+     <p><%= article.text %></p>
+     <p><%= link_to 'Read More', article_path(article), :class=> 'btn btn-default' %> </p>
+   </div>
  <% end %>
-</table>
