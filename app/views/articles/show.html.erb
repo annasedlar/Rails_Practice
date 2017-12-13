@@ -12,8 +12,12 @@
 <hr>
 <%= link_to "Edit", edit_article_path(@article), :class => 'btn btn-warning' %>
 <%= link_to "Delete", @article,
-                    # method: :delete,
+                    method: :delete,
                     data: {confirm: "Are you sure?"},
                     :class => 'btn btn-danger' %>
             
 
+<hr>
+
+<%= render 'comments/comments' %>
+<%= render 'comments/comment-form' %>
