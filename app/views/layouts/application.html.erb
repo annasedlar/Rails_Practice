@@ -3,12 +3,29 @@
   <head>
     <title>Blog</title>
     <%= csrf_meta_tags %>
-
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" %>    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
   </head>
 
   <body>
-    <%= yield %>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Simple Blog</a>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" style="padding-right:60px">
+            <li style="padding-right:60px"> <%= link_to "Home", home_path %> </li>
+          </li>
+          <li class="nav-item">
+            <li><%= link_to "Create Post", new_article_path %></li>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container" style="margin-top:100px">
+      <%= yield %>
+    </div>
   </body>
 </html>
