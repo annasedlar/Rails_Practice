@@ -1,24 +1,6 @@
-# README
+# Rails Blog
+### There are many ways to learn the Ruby on Rails Framework
+#### Coding along with a tutorial covering how to build a blog seems to be one of the more popular options.. 
+###### (I'm not complaining) 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###### To run locally, clone the repo and run `rails server` or `rails s` to start the web server, then navigate to localhost:3000
